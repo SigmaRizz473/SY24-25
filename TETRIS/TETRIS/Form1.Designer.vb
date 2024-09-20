@@ -1,0 +1,108 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class form1
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()>
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()>
+    Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(form1))
+        Avatar = New PictureBox()
+        Timer1 = New Timer(components)
+        Enemy = New PictureBox()
+        PictureBox1 = New PictureBox()
+        Enemy2 = New PictureBox()
+        CType(Avatar, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Enemy, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Enemy2, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' Avatar
+        ' 
+        Avatar.Image = CType(resources.GetObject("Avatar.Image"), Image)
+        Avatar.Location = New Point(317, 94)
+        Avatar.Name = "Avatar"
+        Avatar.Size = New Size(84, 98)
+        Avatar.SizeMode = PictureBoxSizeMode.StretchImage
+        Avatar.TabIndex = 0
+        Avatar.TabStop = False
+        ' 
+        ' Timer1
+        ' 
+        Timer1.Enabled = True
+        Timer1.Interval = 50
+        ' 
+        ' Enemy
+        ' 
+        Enemy.Image = CType(resources.GetObject("Enemy.Image"), Image)
+        Enemy.Location = New Point(549, 205)
+        Enemy.Name = "Enemy"
+        Enemy.Size = New Size(85, 104)
+        Enemy.SizeMode = PictureBoxSizeMode.StretchImage
+        Enemy.TabIndex = 2
+        Enemy.TabStop = False
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(121, 317)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(90, 120)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 3
+        PictureBox1.TabStop = False
+        ' 
+        ' Enemy2
+        ' 
+        Enemy2.Image = CType(resources.GetObject("Enemy2.Image"), Image)
+        Enemy2.Location = New Point(716, 88)
+        Enemy2.Name = "Enemy2"
+        Enemy2.Size = New Size(85, 104)
+        Enemy2.SizeMode = PictureBoxSizeMode.StretchImage
+        Enemy2.TabIndex = 4
+        Enemy2.TabStop = False
+        ' 
+        ' form1
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackgroundImage = My.Resources.Resources._360_F_173470720_YdpslFqysnVYxwtoyfCxnb2nQhVD71hV
+        ClientSize = New Size(894, 518)
+        Controls.Add(Enemy2)
+        Controls.Add(Avatar)
+        Controls.Add(PictureBox1)
+        Controls.Add(Enemy)
+        Name = "form1"
+        Text = "RUN! DIDDY! RUN!"
+        CType(Avatar, ComponentModel.ISupportInitialize).EndInit()
+        CType(Enemy, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(Enemy2, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+    End Sub
+
+    Friend WithEvents Avatar As PictureBox
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Enemy As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Enemy2 As PictureBox
+
+End Class
