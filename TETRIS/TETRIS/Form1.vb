@@ -1,18 +1,18 @@
 ﻿Public Class form1
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        follow(Enemy, Avatar, 10)
-        follow(Enemy2, Avatar, 5)
+        follow(Enemy, Avatar, 10, 0)
+        follow(Enemy2, Avatar, 0, 5)
     End Sub
-    Sub follow(e As PictureBox, a As PictureBox, s As Integer)
+    Sub follow(e As PictureBox, a As PictureBox, speedx As Integer, speedy As Integer)
         If e.Location.Y > a.Location.Y Then
-            move(e, 0, -s)
+            move(e, 0, -speedy)
         Else
-            move(e, 0, s)
+            move(e, 0, speedy)
         End If
         If e.Location.X > a.Location.X Then
-            move(e, -s, 0)
+            move(e, -speedx, 0)
         Else
-            move(e, s, 0)
+            move(e, speedx, 0)
         End If
     End Sub
 
