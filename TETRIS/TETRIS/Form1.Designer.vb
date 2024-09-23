@@ -73,7 +73,7 @@ Partial Class form1
         ' Enemy2
         ' 
         Enemy2.Image = CType(resources.GetObject("Enemy2.Image"), Image)
-        Enemy2.Location = New Point(716, 88)
+        Enemy2.Location = New Point(734, 333)
         Enemy2.Name = "Enemy2"
         Enemy2.Size = New Size(85, 104)
         Enemy2.SizeMode = PictureBoxSizeMode.StretchImage
