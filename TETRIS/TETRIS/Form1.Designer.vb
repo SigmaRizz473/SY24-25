@@ -29,10 +29,14 @@ Partial Class form1
         Enemy = New PictureBox()
         PictureBox1 = New PictureBox()
         Enemy2 = New PictureBox()
+        Platform = New PictureBox()
+        Enemy3 = New PictureBox()
         CType(Avatar, ComponentModel.ISupportInitialize).BeginInit()
         CType(Enemy, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(Enemy2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Platform, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Enemy3, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Avatar
@@ -53,7 +57,7 @@ Partial Class form1
         ' Enemy
         ' 
         Enemy.Image = CType(resources.GetObject("Enemy.Image"), Image)
-        Enemy.Location = New Point(549, 205)
+        Enemy.Location = New Point(529, 128)
         Enemy.Name = "Enemy"
         Enemy.Size = New Size(85, 104)
         Enemy.SizeMode = PictureBoxSizeMode.StretchImage
@@ -63,7 +67,7 @@ Partial Class form1
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(121, 317)
+        PictureBox1.Location = New Point(114, 112)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(90, 120)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
@@ -73,12 +77,32 @@ Partial Class form1
         ' Enemy2
         ' 
         Enemy2.Image = CType(resources.GetObject("Enemy2.Image"), Image)
-        Enemy2.Location = New Point(734, 333)
+        Enemy2.Location = New Point(706, 112)
         Enemy2.Name = "Enemy2"
         Enemy2.Size = New Size(85, 104)
         Enemy2.SizeMode = PictureBoxSizeMode.StretchImage
         Enemy2.TabIndex = 4
         Enemy2.TabStop = False
+        ' 
+        ' Platform
+        ' 
+        Platform.BackColor = SystemColors.ActiveBorder
+        Platform.Location = New Point(-2, 418)
+        Platform.Name = "Platform"
+        Platform.Size = New Size(899, 105)
+        Platform.TabIndex = 5
+        Platform.TabStop = False
+        ' 
+        ' Enemy3
+        ' 
+        Enemy3.Image = CType(resources.GetObject("Enemy3.Image"), Image)
+        Enemy3.Location = New Point(562, 317)
+        Enemy3.Name = "Enemy3"
+        Enemy3.Size = New Size(85, 104)
+        Enemy3.SizeMode = PictureBoxSizeMode.StretchImage
+        Enemy3.TabIndex = 6
+        Enemy3.TabStop = False
+        Enemy3.Tag = "-1"
         ' 
         ' form1
         ' 
@@ -86,6 +110,8 @@ Partial Class form1
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources._360_F_173470720_YdpslFqysnVYxwtoyfCxnb2nQhVD71hV
         ClientSize = New Size(894, 518)
+        Controls.Add(Enemy3)
+        Controls.Add(Platform)
         Controls.Add(Enemy2)
         Controls.Add(Avatar)
         Controls.Add(PictureBox1)
@@ -96,6 +122,8 @@ Partial Class form1
         CType(Enemy, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(Enemy2, ComponentModel.ISupportInitialize).EndInit()
+        CType(Platform, ComponentModel.ISupportInitialize).EndInit()
+        CType(Enemy3, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -104,5 +132,7 @@ Partial Class form1
     Friend WithEvents Enemy As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Enemy2 As PictureBox
+    Friend WithEvents Platform As PictureBox
+    Friend WithEvents Enemy3 As PictureBox
 
 End Class

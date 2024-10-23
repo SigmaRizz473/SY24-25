@@ -2,6 +2,31 @@
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         follow(Enemy, Avatar, 10, 0)
         follow(Enemy2, Avatar, 0, 5)
+        paceX(Enemy3, Platform, 5)
+    End Sub
+    Sub PaceX(e As PictureBox, p As PictureBox, speed As Integer)
+        Dim dir As Integer
+        dir = e.Tag
+
+        move(e, dir * speed, 0)
+
+        If e.Location.X > p.Location.X + p.Width / 2 Then
+            e.Tag = dir * -1
+        End If
+        If e.Location.X < p.Location.X Then
+            e.Tag = dir * -1
+        End If
+    End Sub
+
+    Sub PaceY(e As PictureBox, p As PictureBox, speed As Integer)
+        Dim dir As Integer
+        dir = e.Tag
+
+        move(e, 0, dir * speed)
+
+        If e.Location.Y < p.Location.Y Then
+            e.Tag = dir * -1
+        End If
     End Sub
     Sub follow(e As PictureBox, a As PictureBox, speedx As Integer, speedy As Integer)
         If e.Location.Y > a.Location.Y Then
